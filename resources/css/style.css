@@ -1,0 +1,651 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    
+    color: currentColor;
+    font-family:'lato';
+    font-size: 20px;
+    font-weight: 100;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/* =================================)*/
+/* headings */
+h1{
+    margin-top: 0;
+    color: aliceblue;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+h2{
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+
+h2:after{
+    display: block;
+    height: 2px;
+    background-color: firebrick;
+    content: " ";
+    width: 200px;
+    margin: 30px auto 0 auto;
+    
+}
+
+h3{
+    margin-bottom: 15px;
+}
+/* =================================== */
+/* paragrahs*/
+
+.long-copy{
+    line-height: 145%;
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+    font-size: 90%;
+    font-weight: 300;
+}
+
+.box p{
+    line-height: 145%;
+    font-size: 90%;
+    text-align:justify;
+    font-weight: 300;
+}
+
+.section-features .long-copy{
+    margin-bottom: 15px;
+}
+/* =================================== */
+/* icons */
+
+.icon-big{
+    font-size: 200%;
+    display: block;
+    color:deepskyblue;
+    margin-bottom: 10px;
+}
+
+/* =================================== */
+/* header */
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7)),url(img/hero.jpg);
+    background-size: cover;
+    background-position:center;
+    height: 100vh;
+     background-attachment: fixed;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    margin-left: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo-black{
+    display: none; 
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+.main-nav{
+    float: right;
+    list-style:none;
+    margin-top: 55px;
+    
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+
+.main-nav li a:link,
+.main-nav li a:visited{
+
+    text-decoration: none;
+    color: floralwhite;
+    font-size: 23px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    padding-bottom: 3px;
+    text-decoration: none;
+    color: floralwhite;
+    border-bottom: 2px solid crimson;
+    font-size: 23px;
+
+}
+
+/* navitation eka fixed karan part eka ==================================*/
+
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.993);
+    box-shadow: 0 2px 2px rgb(228, 227, 227);
+    z-index: 9999;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding-bottom: 16px;
+    text-decoration: none;
+    color: #000;
+}
+
+.sticky .main-nav{
+    margin-top: 18px;
+    
+}
+.sticky .logo{
+    display: none;
+}
+.sticky .logo-black{
+    display: block;
+}
+
+/* =========================================================================== */
+/* Mobile navigation */
+
+.mobile-nav-icon{
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i{
+    font-size: 200%;
+    color: #fff;
+}
+
+/* ============================== */
+/* resuable components */
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+
+}
+section{
+    padding: 80px 0;
+}
+
+.box{
+    padding: 1%;
+}
+/* ============================== */
+/* buttons */
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.5s, border 0.5s;
+}
+
+.btn-orange:link,
+.btn-orange:visited,
+input[type=submit]{
+    background-color: crimson;
+    border-radius: 1000px;
+    border: 2px solid crimson;
+}
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 2px solid aliceblue;
+    border-radius: 1000px;
+    color: aliceblue;
+}
+
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    background-color: dodgerblue;
+}
+
+.btn-orange:hover,
+.btn-orange:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+  border-color: dodgerblue;
+}
+.btn-ghost:hover,
+.btn-ghost:active{
+    border-color: dodgerblue;
+}
+
+/* =================================== */
+/* meals */
+
+.meals-showcase{
+    list-style: none;
+    width: 100%; 
+}
+
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.meal-photo img{
+    opacity: 0.5;
+    width: 100%;
+    height: auto;
+    transform: scale(1.1);
+    transition: transform 0.5s; 
+        
+}
+
+.meal-photo img:hover{
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.section-meals{
+    padding: 0;
+}
+
+
+/* =================================== */
+/* SECTION STEPS */
+
+.section-steps{
+    background-color:gray;
+}
+.step-box:first-child{
+    text-align:right;
+    padding-right: 5%;
+    margin-top: 30px;
+}
+
+.step-box:last-child{
+    text-align:left;
+    padding-left: 3%;
+    margin-top: 80px;
+}
+
+.app-screen{
+    width: 40%;
+}
+
+.works-step{
+    margin-bottom: 5%;
+}
+
+.works-step p{
+    font-weight: 400;
+}
+
+.works-step div{
+    color:rgb(220, 20, 60);
+    border: 2px solid crimson;
+    display: inline-block;
+    padding: 1%;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 4%;
+    height: 50px;
+    width: 50px;
+    font-size: 150%;
+    font-weight: 400;
+    float:left;
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+
+/*.section-steps h2{
+    margin-top: 500px;
+}*/
+
+
+/*=====================================*/
+/*SECTION CITIES*/
+
+.box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.city-features{
+    margin-bottom: 2%;
+}
+
+.city-features i {
+    display: inline-block;
+    width: 30px;
+    font-size: 120%;
+    color: crimson;
+    text-align: center;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -4px;
+    margin-right: 10px;
+}
+
+.city-features a:link,
+.city-features a:visited{
+    color: dodgerblue;
+    text-decoration: none;
+    transition: 0.5s;
+    padding-bottom: 2px;
+    border-bottom: 1px solid dodgerblue;
+}
+
+.city-features a:hover,
+.city-features a:active{
+    color:deeppink;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+}
+
+/*=====================================================*/
+/* section-customer-review */
+
+.section-customer-review{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(img/back-customers.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    background-attachment:fixed;
+}
+
+blockquote{
+    padding: 2%;
+    line-height: 145%;
+    margin-top: 40px;
+    position: relative;
+}
+
+blockquote:before{
+    content: "\201C";
+    font-size: 400%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -7px;
+}
+
+cite{
+    display: block;
+    margin-top: 25px;
+    font-size: 90%;
+}
+
+cite img{
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/*====================================================*/
+/* SECTION-SIGN-UP */
+
+.section-plans{
+    background-color: rgb(230, 230, 230);
+}
+
+
+.plan-box{
+    
+    background-color: #fff;
+    border-radius: 7px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0 2px 2px deepskyblue;
+
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid rgb(0, 241, 241);
+}
+
+.plan-price{
+    font-size: 300%;
+    color: #ffffff;
+}
+
+.plan-price-meal{
+    font-weight: 300;
+    padding: 3px 0;
+}
+
+.plan-price span{
+    font-size: 30%;
+    font-weight: 400;
+}
+
+.plan-box ul{
+    list-style: none;
+}
+
+.plan-box ul li{
+    padding: 5px 0;
+    font-weight: 300;
+}
+
+.icon-star{
+    
+    color: crimson;
+    padding-right: 10px;
+    font-size: 150%;
+    vertical-align: middle;
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border-bottom: 1px solid transparent;
+}
+
+.plan-box div:first-child{
+    background-color: deepskyblue;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn-transparent:link,
+.btn-transparent:visited{
+    color: deepskyblue;
+    border: 2px solid deepskyblue;
+    border-radius: 1000px;
+}
+
+.btn-transparent:hover,
+.btn-transparent:active{
+    color: #fff;
+    background-color: deepskyblue;
+}
+
+/* =================================== */
+/* FORM */
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1.5px solid #ccc;
+}
+
+textarea{
+    height: 100px;
+}
+
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;
+}
+
+*:focus{outline: none;}
+
+/* =================================== */
+/* FOOTER */
+
+footer{
+    background-color:#313131;
+    padding: 50px;
+}
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-nav{
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-nav li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-of-type,
+.social-nav li:last-of-type{
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited{
+    color:dimgrey;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 400;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: deepskyblue;
+}
+
+footer p{
+    color: dimgrey;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.social-nav a:link,
+.social-nav a:visited{
+    color: dimgrey;
+    font-size: 150%;
+}
+
+.ion-social-facebook:hover,
+.ion-social-facebook:active{
+    color:cornflowerblue;
+}
+
+.ion-social-twitter:hover,
+.ion-social-twitter:active{
+    color:deepskyblue;
+}
+
+.ion-social-googleplus:hover,
+.ion-social-googleplus:active{
+    color:red;
+}
+
+.ion-social-instagram:hover,
+.ion-social-instagram:active{
+    color:brown;
+}
+
+/* =================================== */
+/* Animation */
+
+.js-waypoint-1,
+.js-waypoint-2,
+.js-waypoint-3{
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.js-waypoint-4{
+    animation-duration: 1s;
+}
+
+.js-waypoint-1 .animated,
+.js-waypoint-2 .animated,
+.js-waypoint-3 .animated {
+    opacity: 1;
+}
+
